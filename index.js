@@ -42,8 +42,8 @@
 text[1].innerHTML="Clicks counter: "+ " " + click;
         }
 
-     // For linear-gradient background with constant angle
 function linerGD() {
+  
     let r1 = Math.floor(Math.random() * 100);
     let g1 = Math.floor(Math.random() * 150);
     let b1 = Math.floor(Math.random() * 200);
@@ -53,11 +53,38 @@ function linerGD() {
     let b2 = Math.floor(Math.random() * 150);
 
     // Degree variable
-    let deg = '180deg';
+    let deg = '120deg';
     
     // Fetch div through classname
     let grad_bg = document.getElementsByClassName('grad_background');
 
-    let Cc = `linear-gradient(${deg}, rgb(${r1}, ${g1}, ${b1}), rgb(${r2}, ${g2}, ${b2}))`;
+    let Cc = `linear-gradient(${deg}, rgb(${r1}, ${g1}, ${b1}), rgb(${r2}, ${g2}, ${b2}), rgb(${r}, ${g}, ${b}))`;
     grad_bg[0].style.background = Cc;
+    text[2].innerHTML='color====:' + Cc;
+    //counting clicks
+    click++;
+    text[3].innerHTML="Clicks counter: "+ " " + click;
 }
+
+//=====================================for auto change bg
+function linerGD1() {
+  let r1 = Math.floor(Math.random() * 100);
+  let g1 = Math.floor(Math.random() * 150);
+  let b1 = Math.floor(Math.random() * 200);
+
+  let r2 = Math.floor(Math.random() * 200);
+  let g2 = Math.floor(Math.random() * 100);
+  let b2 = Math.floor(Math.random() * 150);
+
+  // Degree variable
+  let deg = '120deg';
+  
+  // Fetch div through classname
+  //let grad_bg = document.getElementsByClassName('grad_background');
+
+  let Cc = `linear-gradient(${deg}, rgb(${r1}, ${g1}, ${b1}), rgb(${r2}, ${g2}, ${b2}))`;
+  grad_bg[1].style.background = Cc;
+}
+
+linerGD1();
+setInterval(linerGD1, 3000);
