@@ -60,3 +60,15 @@
     display: block;
 }
     
+.grad_background{
+    height: 500px;
+    width:100%;
+    margin:5px;
+    border: 1px solid;
+}
+.grad_background1{
+    height: 500px;
+    width:100%;
+    margin:5px;
+    border: 1px solid;
+}
